@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Workflow Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        pre {
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Git Workflow Documentation</h1>
+        <p>Follow these steps to create and manage branches, commit changes, and merge them using Git:</p>
+        
+        <h2>1. Navigate to Desktop and Create a Folder</h2>
+        <pre>
+cd /c/Users/YOUR_USERNAME/Desktop
+mkdir my_folder
+cd my_folder
+        </pre>
+
+        <h2>2. Initialize Git and Create a File</h2>
+        <pre>
+echo "Hello from my_folder!" > myfile.txt
+git init
+        </pre>
+
+        <h2>3. Check Current Branch and Status</h2>
+        <pre>
+git branch    # Shows current branch
+git status    # Shows untracked files
+        </pre>
+
+        <h2>4. Stage and Commit Changes</h2>
+        <pre>
+git add .
+git commit -m "Initial commit with myfile.txt"
+        </pre>
+
+        <h2>5. Create a New Branch</h2>
+        <pre>
+git branch new_branch    # Create a new branch
+        </pre>
+
+        <h2>6. Switch to the New Branch</h2>
+        <pre>
+git checkout new_branch  # Move to the new branch
+        </pre>
+
+        <h2>7. Make Changes and Commit on the New Branch</h2>
+        <pre>
+echo "Changes made in new_branch" >> myfile.txt
+git add .
+git commit -m "Updated myfile.txt in new_branch"
+        </pre>
+
+        <h2>8. Switch Back to Main and Merge Changes</h2>
+        <pre>
+git checkout main
+git merge new_branch
+        </pre>
+
+        <h2>9. Delete the Merged Branch</h2>
+        <pre>
+git branch -d new_branch
+        </pre>
+    </div>
+</body>
+</html>
